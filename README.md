@@ -4,8 +4,13 @@ Repositório utilizado para armazenar os códigos implementados como estudo de d
 
 - [Builder](/builder)
 - [Chain of Responsibility](/chain_of_responsibility)
+- [Command](/command)
 - [Decorator](/decorator)
+- [Factory](/factory)
+- [Interpreter](/interpreter)
+- [Memento](/memento)
 - [Observer](/observer)
 - [State](/state)
 - [Strategy](/strategy)
 - [Template Method](/template_method)
+- [Visitor](/visitor)
