@@ -9,6 +9,7 @@ Repositório utilizado para armazenar os códigos implementados como estudo de d
 - [Factory](/factory)
 - [Interpreter](/interpreter)
 - [Memento](/memento)
+- [Monostate (Borg)](/monostate)
 - [Observer](/observer)
 - [Singleton](/singleton)
 - [State](/state)
