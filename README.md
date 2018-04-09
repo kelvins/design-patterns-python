@@ -10,6 +10,7 @@ Repositório utilizado para armazenar os códigos implementados como estudo de d
 - [Interpreter](/interpreter)
 - [Memento](/memento)
 - [Observer](/observer)
+- [Singleton](/singleton)
 - [State](/state)
 - [Strategy](/strategy)
 - [Template Method](/template_method)
