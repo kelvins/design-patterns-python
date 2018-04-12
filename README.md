@@ -3,34 +3,34 @@
 Repositório utilizado para armazenar os códigos implementados como estudo de design patterns em Python.
 
 - **Padrões de Criação**
-  - [Builder](/builder)
-  - [Factory](/factory)
-  - [Monostate (Borg)](/monostate)
+  - [Builder](criacao/builder)
+  - [Factory](criacao/factory)
+  - [Monostate (Borg)](criacao/monostate)
   - Prototype
-  - [Singleton](/singleton)
+  - [Singleton](criacao/singleton)
 
 - **Padrões Estruturais**
   - Adapter
   - Bridge
   - Composite
-  - [Decorator](/decorator)
+  - [Decorator](estruturais/decorator)
   - Facade
   - Business Delegate
   - Flyweight
   - Proxy
   
 - **Padrões Comportamentais**
-  - [Chain of Responsibility](/chain_of_responsibility)
-  - [Command](/command)
-  - [Interpreter](/interpreter)
+  - [Chain of Responsibility](comportamentais/chain_of_responsibility)
+  - [Command](comportamentais/command)
+  - [Interpreter](comportamentais/interpreter)
   - Iterator
   - Mediator
-  - [Memento](/memento)
-  - [Observer](/observer)
-  - [State](/state)
-  - [Strategy](/strategy)
-  - [Template Method](/template_method)
-  - [Visitor](/visitor)
+  - [Memento](comportamentais/memento)
+  - [Observer](comportamentais/observer)
+  - [State](comportamentais/state)
+  - [Strategy](comportamentais/strategy)
+  - [Template Method](comportamentais/template_method)
+  - [Visitor](comportamentais/visitor)
 
 ## Referências
 

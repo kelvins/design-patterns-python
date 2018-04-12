@@ -2,6 +2,7 @@
 
 # Exemplo de aplicação do padrão Singleton utilizando metaclasses
 
+
 class MetaSingleton(type):
 
     _instances = {}
