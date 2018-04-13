@@ -14,7 +14,7 @@ Repositório utilizado para armazenar os códigos implementados como estudo de d
   - Bridge
   - Composite
   - [Decorator](estruturais/decorator)
-  - Facade
+  - [Facade](estruturais/facade)
   - Business Delegate
   - Flyweight
   - Proxy
