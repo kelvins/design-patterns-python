@@ -37,3 +37,4 @@ Repositório utilizado para armazenar os códigos implementados como estudo de d
 - [Curso Design Patterns Python I: Boas práticas de programação. Alura Online.](https://cursos.alura.com.br/course/design-patterns-python)
 - [Curso Design Patterns Python II: Boas práticas de programação. Alura Online.](https://cursos.alura.com.br/course/design-patterns-python-2)
 - [Aprendendo Padrões de Projeto em Python. Chetan Giridhar. Novatec.](https://novatec.com.br/livros/padroes-projeto-python/)
+- [Design Patterns for Humans](https://github.com/kamranahmedse/design-patterns-for-humans)
