@@ -3,8 +3,9 @@
 Repositório utilizado para armazenar os códigos implementados como estudo de design patterns em Python.
 
 - **Padrões de Criação**
+  - Abstract Factory
   - [Builder](criacao/builder)
-  - [Factory](criacao/factory)
+  - [Factory Method](criacao/factory_method)
   - [Monostate (Borg)](criacao/monostate)
   - Prototype
   - [Singleton](criacao/singleton)
@@ -12,10 +13,10 @@ Repositório utilizado para armazenar os códigos implementados como estudo de d
 - **Padrões Estruturais**
   - Adapter
   - Bridge
+  - Business Delegate
   - Composite
   - [Decorator](estruturais/decorator)
   - [Facade](estruturais/facade)
-  - Business Delegate
   - Flyweight
   - Proxy
   
