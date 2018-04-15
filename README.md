@@ -3,7 +3,7 @@
 Repositório utilizado para armazenar os códigos implementados como estudo de design patterns em Python.
 
 - **Padrões de Criação**
-  - Abstract Factory
+  - [Abstract Factory](criacao/abstract_factory)
   - [Builder](criacao/builder)
   - [Factory Method](criacao/factory_method)
   - [Monostate (Borg)](criacao/monostate)
