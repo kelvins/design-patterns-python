@@ -18,7 +18,7 @@ Repositório utilizado para armazenar os códigos implementados como estudo de d
   - [Decorator](estruturais/decorator)
   - [Facade](estruturais/facade)
   - Flyweight
-  - Proxy
+  - [Proxy](estruturais/proxy)
   
 - **Padrões Comportamentais**
   - [Chain of Responsibility](comportamentais/chain_of_responsibility)
