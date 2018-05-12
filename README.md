@@ -25,7 +25,7 @@ Repositório utilizado para armazenar os códigos implementados como estudo de d
   - [Command](comportamentais/command)
   - [Interpreter](comportamentais/interpreter)
   - Iterator
-  - Mediator
+  - [Mediator](comportamentais/mediator)
   - [Memento](comportamentais/memento)
   - [Observer](comportamentais/observer)
   - [State](comportamentais/state)
