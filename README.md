@@ -11,7 +11,7 @@ Repositório utilizado para armazenar os códigos implementados como estudo de d
   - [Singleton](criacao/singleton)
 
 - **Padrões Estruturais**
-  - Adapter
+  - [Adapter](estruturais/adapter)
   - Bridge
   - Business Delegate
   - Composite
