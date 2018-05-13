@@ -24,7 +24,7 @@ Repositório utilizado para armazenar os códigos implementados como estudo de d
   - [Chain of Responsibility](comportamentais/chain_of_responsibility)
   - [Command](comportamentais/command)
   - [Interpreter](comportamentais/interpreter)
-  - Iterator
+  - [Iterator](comportamentais/iterator)
   - [Mediator](comportamentais/mediator)
   - [Memento](comportamentais/memento)
   - [Observer](comportamentais/observer)
