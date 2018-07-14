@@ -12,7 +12,7 @@ Repositório utilizado para armazenar os códigos implementados como estudo de d
 
 - **Padrões Estruturais**
   - [Adapter](estruturais/adapter)
-  - Bridge
+  - [Bridge](estruturais/bridge)
   - Business Delegate
   - Composite
   - [Decorator](estruturais/decorator)
