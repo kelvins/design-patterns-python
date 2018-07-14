@@ -1,6 +1,6 @@
-# Design Patterns em Python
+# Padrões de Projeto em Python
 
-Repositório utilizado para armazenar os códigos implementados como estudo de design patterns em Python.
+Padrões de projeto em Python com código e descrição.
 
 - **Padrões de Criação**
   - [Abstract Factory](criacao/abstract_factory)
