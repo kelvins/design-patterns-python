@@ -7,7 +7,7 @@ Padrões de projeto em Python com código e descrição.
   - [Builder](criacao/builder)
   - [Factory Method](criacao/factory_method)
   - [Monostate (Borg)](criacao/monostate)
-  - Prototype
+  - [Prototype](criacao/prototype)
   - [Singleton](criacao/singleton)
 
 - **Padrões Estruturais**
