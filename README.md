@@ -17,7 +17,7 @@ Padrões de projeto em Python com código e descrição.
   - [Composite](estruturais/composite)
   - [Decorator](estruturais/decorator)
   - [Facade](estruturais/facade)
-  - Flyweight
+  - [Flyweight](estruturais/flyweight)
   - [Proxy](estruturais/proxy)
   
 - **Padrões Comportamentais**
