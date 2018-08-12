@@ -13,7 +13,6 @@ Padrões de projeto em Python com código e descrição.
 - **Padrões Estruturais**
   - [Adapter](estruturais/adapter)
   - [Bridge](estruturais/bridge)
-  - Business Delegate
   - [Composite](estruturais/composite)
   - [Decorator](estruturais/decorator)
   - [Facade](estruturais/facade)
