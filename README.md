@@ -14,7 +14,7 @@ Padrões de projeto em Python com código e descrição.
   - [Adapter](estruturais/adapter)
   - [Bridge](estruturais/bridge)
   - Business Delegate
-  - Composite
+  - [Composite](estruturais/composite)
   - [Decorator](estruturais/decorator)
   - [Facade](estruturais/facade)
   - Flyweight
