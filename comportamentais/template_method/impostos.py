@@ -6,11 +6,10 @@
 from abc import ABCMeta, abstractmethod
 
 
-class Template_de_impostos_condicional(object):
+class Template_de_impostos_condicional(object, metaclass=ABCMeta):
     """
     Classe abstrata.
     """
-    __metaclass__ = ABCMeta
 
     def calcula(self, orcamento):
         if self.deve_usar_maxima_taxacao(orcamento):

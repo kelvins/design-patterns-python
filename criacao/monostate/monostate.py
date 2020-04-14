@@ -15,6 +15,6 @@ if __name__ == "__main__":
     m2 = Monostate()
     m1.x = 4
     print(m1)
-    print("X value: %d" % m1.x)
+    print(("X value: %d" % m1.x))
     print(m2)
-    print("X value: %d" % m2.x)
+    print(("X value: %d" % m2.x))

@@ -22,12 +22,10 @@ class Imposto(object):
         pass
 
 
-class Template_de_impostos_condicional(Imposto):
+class Template_de_impostos_condicional(Imposto, metaclass=ABCMeta):
     """
     Classe abstrata.
     """
-
-    __metaclass__ = ABCMeta
 
     def calcula(self, orcamento):
         if self.deve_usar_maxima_taxacao(orcamento):

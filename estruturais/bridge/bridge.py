@@ -4,9 +4,7 @@
 from abc import ABCMeta, abstractmethod
 
 
-class Theme(object):
-
-    __metaclass__ = ABCMeta
+class Theme(object, metaclass=ABCMeta):
 
     @abstractmethod
     def color(self):
@@ -31,9 +29,7 @@ class AquaTheme(Theme):
         return 'Light Blue'
 
 
-class WebPage(object):
-
-    __metaclass__ = ABCMeta
+class WebPage(object, metaclass=ABCMeta):
 
     @abstractmethod
     def content(self):
@@ -64,5 +60,5 @@ if __name__ == '__main__':
     about = About(dark_theme)
     careers = Careers(dark_theme)
 
-    print(about.content())
-    print(careers.content())
+    print((about.content()))
+    print((careers.content()))

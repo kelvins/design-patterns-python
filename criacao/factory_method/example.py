@@ -2,9 +2,7 @@
 from abc import ABCMeta, abstractmethod
 
 
-class Section(object):
-
-    __metaclass__ = ABCMeta
+class Section(object, metaclass=ABCMeta):
 
     @abstractmethod
     def describe(self):
@@ -35,9 +33,7 @@ class PublicationSection(Section):
         print('Publication Section')
 
 
-class Profile(object):
-
-    __metaclass__ = ABCMeta
+class Profile(object, metaclass=ABCMeta):
 
     def __init__(self):
         self.sections = []
@@ -73,8 +69,8 @@ if __name__ == '__main__':
     l = Linkedin()
     f = Facebook()
 
-    print('Creating Profile...', type(l).__name__)
-    print('Profile has sections --', l.get_sections())
+    print(('Creating Profile...', type(l).__name__))
+    print(('Profile has sections --', l.get_sections()))
 
-    print('Creating Profile...', type(f).__name__)
-    print('Profile has sections --', f.get_sections())
+    print(('Creating Profile...', type(f).__name__))
+    print(('Profile has sections --', f.get_sections()))

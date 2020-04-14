@@ -37,9 +37,7 @@ class Pedido(object):
         return self.__data_finalizacao
 
 
-class Comando(object):
-
-    __metaclass__ = ABCMeta
+class Comando(object, metaclass=ABCMeta):
 
     @abstractmethod
     def executa(self):
@@ -94,6 +92,6 @@ if __name__ == "__main__":
 
     fila.processa()
 
-    print pedido1.status
-    print pedido2.status
+    print(pedido1.status)
+    print(pedido2.status)
 

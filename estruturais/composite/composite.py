@@ -51,12 +51,12 @@ class Organizacao(object):
         return salarios
 
 
-if __name__ == u'__main__':
-    joao = Desenvolvedor(u'Joao da Silva', 1800)
-    carla = Designer(u'Carla Camila', 1900)
+if __name__ == '__main__':
+    joao = Desenvolvedor('Joao da Silva', 1800)
+    carla = Designer('Carla Camila', 1900)
 
     organizacao = Organizacao()
     organizacao.add_colaborador(joao)
     organizacao.add_colaborador(carla)
 
-    print u'Total salários: {}'.format(organizacao.total_salarios())
+    print('Total salários: {}'.format(organizacao.total_salarios()))

@@ -6,9 +6,7 @@ from datetime import datetime
 from abc import ABCMeta, abstractmethod
 
 
-class ChatRoomMediator(object):
-
-    __metaclass__ = ABCMeta
+class ChatRoomMediator(object, metaclass=ABCMeta):
 
     @abstractmethod
     def show_message(self, user, message):
@@ -22,7 +20,7 @@ class ChatRoom(ChatRoomMediator):
         time = datetime.now()
         sender = user.name
 
-        print '{} [{}]: {}'.format(time, sender, message)
+        print('{} [{}]: {}'.format(time, sender, message))
 
 
 class User(object):

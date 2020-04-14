@@ -11,10 +11,10 @@ class Sheep(object):
 
 if __name__ == '__main__':
     original_sheep = Sheep('Jolly')
-    print(original_sheep.name)
-    print(original_sheep.category)
+    print((original_sheep.name))
+    print((original_sheep.category))
 
     cloned_sheep = copy.deepcopy(original_sheep)
     cloned_sheep.name = 'Dolly'
-    print(cloned_sheep.name)
-    print(cloned_sheep.category)
+    print((cloned_sheep.name))
+    print((cloned_sheep.category))

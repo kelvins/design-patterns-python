@@ -24,10 +24,10 @@ if __name__ == "__main__":
 
     calculador = Calculador_de_impostos()
 
-    print 'ISS e ICMS'
+    print('ISS e ICMS')
     calculador.realiza_calculo(orcamento, ISS())
     calculador.realiza_calculo(orcamento, ICMS())
 
-    print 'ICPP e IKCV'
+    print('ICPP e IKCV')
     calculador.realiza_calculo(orcamento, ICPP())
     calculador.realiza_calculo(orcamento, IKCV())

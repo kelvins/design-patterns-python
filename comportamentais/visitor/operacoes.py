@@ -65,7 +65,7 @@ if __name__ == "__main__":
     impressao = Impressao()
     expressao_conta.aceita(impressao)
 
-    print ''
+    print('')
 
     expressao_esquerda = Subtracao(Numero(100), Numero(20))
     expressao_direita = Soma(Numero(5), Numero(5))

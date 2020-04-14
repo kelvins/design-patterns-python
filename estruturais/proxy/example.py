@@ -2,9 +2,7 @@
 from abc import ABCMeta, abstractmethod
 
 
-class Payment(object):
-
-    __metaclass__ = ABCMeta
+class Payment(object, metaclass=ABCMeta):
 
     @abstractmethod
     def do_pay(self):
@@ -23,7 +21,7 @@ class Bank(Payment):
         return self.account
 
     def __has_founds(self):
-        print("Bank:: Checking if Account %d has enough funds" % self.__get_account())
+        print(("Bank:: Checking if Account %d has enough funds" % self.__get_account()))
         return True
 
     def set_card(self, card):
@@ -44,7 +42,7 @@ class DebitCard(Payment):
         self.bank = Bank()
 
     def do_pay(self):
-        card = input("Proxy:: Punch in Card Number: ")
+        card = eval(input("Proxy:: Punch in Card Number: "))
         self.bank.set_card(card)
 
         return self.bank.do_pay()

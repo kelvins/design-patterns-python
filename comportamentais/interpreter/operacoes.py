@@ -34,7 +34,7 @@ if __name__ == "__main__":
     expressao_esquerda = Soma(Numero(10), Numero(20))
     expressao_direita = Soma(Numero(5), Numero(2))
     expressao_conta = Soma(expressao_esquerda, expressao_direita)
-    print expressao_conta.avalia()
+    print(expressao_conta.avalia())
 
     expressao_conta2 = Subtracao(Numero(100), Numero(70))
-    print expressao_conta2.avalia()
+    print(expressao_conta2.avalia())

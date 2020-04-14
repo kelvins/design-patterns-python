@@ -4,9 +4,7 @@
 from abc import ABCMeta, abstractmethod
 
 
-class Estado_de_um_orcamento(object):
-
-    __metaclass__ = ABCMeta
+class Estado_de_um_orcamento(object, metaclass=ABCMeta):
 
     @abstractmethod
     def aplica_desconto_extra(self, orcamento):
@@ -149,12 +147,12 @@ if __name__ == "__main__":
     orcamento.adiciona_item(Item("item 1", 50.0))
     orcamento.adiciona_item(Item("item 2", 400.0))
 
-    print orcamento.valor
+    print(orcamento.valor)
 
     orcamento.aprova()
 
     orcamento.aplica_desconto_extra()
 
-    print orcamento.valor
+    print(orcamento.valor)
 
     orcamento.finaliza()

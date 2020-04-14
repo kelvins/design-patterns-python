@@ -4,9 +4,7 @@
 from abc import ABCMeta, abstractmethod
 
 
-class Lion(object):
-
-    __metaclass__ = ABCMeta
+class Lion(object, metaclass=ABCMeta):
 
     @abstractmethod
     def roar(self):
@@ -16,13 +14,13 @@ class Lion(object):
 class AfricanLion(Lion):
 
     def roar(self):
-        print 'African Lion'
+        print('African Lion')
 
 
 class AsianLion(Lion):
 
     def roar(self):
-        print 'Asian Lion'
+        print('Asian Lion')
 
 
 class Hunter(object):
@@ -34,7 +32,7 @@ class Hunter(object):
 class WildDog(object):
 
     def bark(self):
-        print 'Wild Dog'
+        print('Wild Dog')
 
 
 class WildDogAdapter(Lion):

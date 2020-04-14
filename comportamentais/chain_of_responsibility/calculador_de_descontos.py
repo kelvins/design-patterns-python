@@ -30,10 +30,10 @@ if __name__ == "__main__":
     orcamento.adiciona_item(Item("item 8", 100.0))
     orcamento.adiciona_item(Item("item 9", 100.0))
 
-    print orcamento.valor
+    print(orcamento.valor)
 
     calculator = Calculador_de_descontos()
 
     desconto = calculator.calcula(orcamento)
 
-    print "Desconto calculado %s" % desconto
+    print("Desconto calculado %s" % desconto)

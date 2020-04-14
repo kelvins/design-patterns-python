@@ -105,10 +105,10 @@ if __name__ == "__main__":
 
     historico.adiciona_estado(contrato.salva_estado())
 
-    print contrato.tipo
-    print contrato.cliente
+    print(contrato.tipo)
+    print(contrato.cliente)
 
     contrato.restaura_estado(historico.obtem_estado(0))
 
-    print contrato.tipo
-    print contrato.cliente
+    print(contrato.tipo)
+    print(contrato.cliente)

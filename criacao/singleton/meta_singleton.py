@@ -13,9 +13,7 @@ class MetaSingleton(type):
         return cls._instances[cls]
 
 
-class Logger(object):
-
-    __metaclass__ = MetaSingleton
+class Logger(object, metaclass=MetaSingleton):
 
     def __init__(self, x):
         self.x = x
@@ -26,6 +24,6 @@ if __name__ == "__main__":
     logger2 = Logger(2)
 
     print(logger1)
-    print(logger1.x)
+    print((logger1.x))
     print(logger2)
-    print(logger2.x)
+    print((logger2.x))

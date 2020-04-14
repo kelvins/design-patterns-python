@@ -37,16 +37,16 @@ class TeaShop(object):
         self.__orders[table].append(self.__tea_maker.make(tea_type))
 
     def serve(self):
-        for table, orders in self.__orders.iteritems():
-            print u'Serving tea to table {}'.format(table)
+        for table, orders in self.__orders.items():
+            print('Serving tea to table {}'.format(table))
 
-if __name__ == u'__main__':
+if __name__ == '__main__':
     tea_maker = TeaMaker()
     shop = TeaShop(tea_maker)
 
-    shop.take_order(u'red tea', 1)
-    shop.take_order(u'red tea more sugar', 2)
-    shop.take_order(u'red tea more milk', 3)
+    shop.take_order('red tea', 1)
+    shop.take_order('red tea more sugar', 2)
+    shop.take_order('red tea more milk', 3)
 
     shop.serve()
 

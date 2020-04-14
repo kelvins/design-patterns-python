@@ -34,21 +34,21 @@ class Singleton2(object):
 if __name__ == "__main__":
 
     foo = Singleton1("Maria")
-    print(foo.nome)
+    print((foo.nome))
     print(foo)
 
     bar = Singleton1("Joao")
-    print(bar.nome)
+    print((bar.nome))
     print(bar)
 
-    print(foo is bar)
+    print((foo is bar))
 
     foo = Singleton2("Maria")
-    print(foo.nome)
+    print((foo.nome))
     print(foo)
 
     bar = Singleton2("Joao")
-    print(bar.nome)
+    print((bar.nome))
     print(bar)
 
-    print(foo is bar)
+    print((foo is bar))
