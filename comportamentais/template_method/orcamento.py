@@ -1,9 +1,7 @@
-
 # -*- encoding: UTF-8 -*-
 
 
 class Orcamento(object):
-
     def __init__(self):
 
         self.__itens = []
@@ -27,7 +25,6 @@ class Orcamento(object):
 
 
 class Item(object):
-
     def __init__(self, nome, valor):
         self.__nome = nome
         self.__valor = valor
@@ -39,4 +36,3 @@ class Item(object):
     @property
     def nome(self):
         return self.__nome
-

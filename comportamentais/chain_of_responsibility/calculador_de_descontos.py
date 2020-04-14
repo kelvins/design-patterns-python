@@ -1,17 +1,19 @@
-
 # -*- coding: UTF-8 -*-
 
-from descontos import Desconto_por_cinco_itens, Desconto_por_mais_de_quinhentos_reais, Sem_desconto
+from descontos import (
+    Desconto_por_cinco_itens,
+    Desconto_por_mais_de_quinhentos_reais,
+    Sem_desconto,
+)
+
 
 class Calculador_de_descontos(object):
-
     def calcula(self, orcamento):
 
         return Desconto_por_cinco_itens(
-            Desconto_por_mais_de_quinhentos_reais(
-                Sem_desconto()
-            )
+            Desconto_por_mais_de_quinhentos_reais(Sem_desconto())
         ).calcula(orcamento)
+
 
 if __name__ == "__main__":
 

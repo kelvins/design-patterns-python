@@ -1,8 +1,8 @@
-
 # -*- encoding: UTF-8 -*-
 
 # abc = abstract class
-# Ao utilizar o abstractmethod decorator obrigamos as classes filhas a implementarem os métodos
+# Ao utilizar o abstractmethod decorator obrigamos as
+# classes filhas a implementarem os métodos
 from abc import ABCMeta, abstractmethod
 
 
@@ -31,21 +31,18 @@ class Template_de_impostos_condicional(object, metaclass=ABCMeta):
 
 
 class ISS(object):
-
     def calcula(self, orcamento):
 
         return orcamento.valor * 0.1
 
 
 class ICMS(object):
-
     def calcula(self, orcamento):
 
         return orcamento.valor * 0.06
 
 
 class ICPP(Template_de_impostos_condicional):
-
     def deve_usar_maxima_taxacao(self, orcamento):
 
         return orcamento.valor > 500
@@ -60,7 +57,6 @@ class ICPP(Template_de_impostos_condicional):
 
 
 class IKCV(Template_de_impostos_condicional):
-
     def __tem_item_maior_que_cem_reais(self, orcamento):
 
         for item in orcamento.obter_itens():
@@ -70,7 +66,9 @@ class IKCV(Template_de_impostos_condicional):
 
     def deve_usar_maxima_taxacao(self, orcamento):
 
-        return orcamento.valor > 500 and self.__tem_item_maior_que_cem_reais(orcamento)
+        return orcamento.valor > 500 and self.__tem_item_maior_que_cem_reais(
+            orcamento
+        )
 
     def maxima_taxacao(self, orcamento):
 

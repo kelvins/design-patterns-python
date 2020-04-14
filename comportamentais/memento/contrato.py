@@ -1,11 +1,9 @@
-
 # -*- encoding: UTF-8 -*-
 
 from datetime import date
 
 
 class Contrato(object):
-
     def __init__(self, data, cliente, tipo):
         self.__data = data
         self.__cliente = cliente
@@ -36,22 +34,20 @@ class Contrato(object):
         self.__tipo = tipo
 
     def avanca(self):
-        if self.__tipo == 'NOVO':
-            self.__tipo = 'EM ANDAMENTO'
-        elif self.__tipo == 'EM ANDAMENTO':
-            self.__tipo = 'ACERTADO'
-        elif self.__tipo == 'ACERTADO':
-            self.__tipo = 'CONCLUIDO'
+        if self.__tipo == "NOVO":
+            self.__tipo = "EM ANDAMENTO"
+        elif self.__tipo == "EM ANDAMENTO":
+            self.__tipo = "ACERTADO"
+        elif self.__tipo == "ACERTADO":
+            self.__tipo = "CONCLUIDO"
 
     def salva_estado(self):
 
-        # Não podemos passar o self para o Estado pois se o contrato fosse alterado
-        # o estado anterior dele tambem seria alterado, e nao queremos isso
+        # Não podemos passar o self para o Estado pois se o contrato fosse
+        # alterado o estado anterior dele tambem seria alterado
         return Estado(
             Contrato(
-                data=self.__data,
-                cliente=self.__cliente,
-                tipo=self.__tipo
+                data=self.__data, cliente=self.__cliente, tipo=self.__tipo
             )
         )
 
@@ -62,7 +58,6 @@ class Contrato(object):
 
 
 class Estado(object):
-
     def __init__(self, contrato):
         self.__contrato = contrato
 
@@ -72,7 +67,6 @@ class Estado(object):
 
 
 class Historico(object):
-
     def __init__(self):
         self.__estados_salvos = []
 
@@ -87,9 +81,9 @@ if __name__ == "__main__":
 
     historico = Historico()
 
-    contrato = Contrato(data=date.today(),
-                        cliente='Kelvin Salton',
-                        tipo='NOVO')
+    contrato = Contrato(
+        data=date.today(), cliente="Kelvin Salton", tipo="NOVO"
+    )
 
     contrato.avanca()
 
@@ -97,7 +91,7 @@ if __name__ == "__main__":
 
     contrato.avanca()
 
-    contrato.cliente = 'Joao da Silva'
+    contrato.cliente = "Joao da Silva"
 
     historico.adiciona_estado(contrato.salva_estado())
 

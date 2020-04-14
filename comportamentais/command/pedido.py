@@ -1,11 +1,10 @@
 # -*- encoding: UTF-8 -*-
 
-from datetime import date
 from abc import ABCMeta, abstractmethod
+from datetime import date
 
 
 class Pedido(object):
-
     def __init__(self, cliente, valor):
 
         self.__cliente = cliente
@@ -38,14 +37,12 @@ class Pedido(object):
 
 
 class Comando(object, metaclass=ABCMeta):
-
     @abstractmethod
     def executa(self):
         pass
 
 
 class Paga_pedido(Comando):
-
     def __init__(self, pedido):
         self.__pedido = pedido
 
@@ -54,7 +51,6 @@ class Paga_pedido(Comando):
 
 
 class Finaliza_pedido(Comando):
-
     def __init__(self, pedido):
         self.__pedido = pedido
 
@@ -63,7 +59,6 @@ class Finaliza_pedido(Comando):
 
 
 class Fila_de_trabalho(object):
-
     def __init__(self):
 
         self.__comandos = []
@@ -74,6 +69,7 @@ class Fila_de_trabalho(object):
     def processa(self):
         for comando in self.__comandos:
             comando.executa()
+
 
 if __name__ == "__main__":
 
@@ -94,4 +90,3 @@ if __name__ == "__main__":
 
     print(pedido1.status)
     print(pedido2.status)
-

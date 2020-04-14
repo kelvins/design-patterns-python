@@ -1,11 +1,9 @@
-
 # -*- encoding: UTF-8 -*-
 
 from abc import ABCMeta, abstractmethod
 
 
 class Estado_de_um_orcamento(object, metaclass=ABCMeta):
-
     @abstractmethod
     def aplica_desconto_extra(self, orcamento):
         pass
@@ -24,7 +22,6 @@ class Estado_de_um_orcamento(object, metaclass=ABCMeta):
 
 
 class Em_aprovacao(Estado_de_um_orcamento):
-
     def aplica_desconto_extra(self, orcamento):
         orcamento.adiciona_desconto_extra(orcamento.valor * 0.02)
 
@@ -39,7 +36,6 @@ class Em_aprovacao(Estado_de_um_orcamento):
 
 
 class Aprovado(Estado_de_um_orcamento):
-
     def aplica_desconto_extra(self, orcamento):
         orcamento.adiciona_desconto_extra(orcamento.valor * 0.05)
 
@@ -54,7 +50,6 @@ class Aprovado(Estado_de_um_orcamento):
 
 
 class Reprovado(Estado_de_um_orcamento):
-
     def aplica_desconto_extra(self, orcamento):
         raise Exception("Orcamentos reprovados nao recebem desconto extra")
 
@@ -69,7 +64,6 @@ class Reprovado(Estado_de_um_orcamento):
 
 
 class Finalizado(Estado_de_um_orcamento):
-
     def aplica_desconto_extra(self, orcamento):
         raise Exception("Orcamentos finalizados nao recebem desconto extra")
 
@@ -80,11 +74,12 @@ class Finalizado(Estado_de_um_orcamento):
         raise Exception("Orcamentos finalizado nao pode ser reprovado")
 
     def finaliza(self, orcamento):
-        raise Exception("Orcamentos finalizado nao pode ser finalizado novamente")
+        raise Exception(
+            "Orcamentos finalizado nao pode ser finalizado novamente"
+        )
 
 
 class Orcamento(object):
-
     def __init__(self):
 
         self.__itens = []
@@ -125,7 +120,6 @@ class Orcamento(object):
 
 
 class Item(object):
-
     def __init__(self, nome, valor):
         self.__nome = nome
         self.__valor = valor

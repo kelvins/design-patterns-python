@@ -1,16 +1,13 @@
-
 from abc import ABCMeta, abstractmethod
 
 
 class Payment(object, metaclass=ABCMeta):
-
     @abstractmethod
     def do_pay(self):
         pass
 
 
 class Bank(Payment):
-
     def __init__(self):
         self.card = None
         self.account = None
@@ -21,7 +18,12 @@ class Bank(Payment):
         return self.account
 
     def __has_founds(self):
-        print(("Bank:: Checking if Account %d has enough funds" % self.__get_account()))
+        print(
+            (
+                "Bank:: Checking if Account %d has enough funds"
+                % self.__get_account()
+            )
+        )
         return True
 
     def set_card(self, card):
@@ -37,7 +39,6 @@ class Bank(Payment):
 
 
 class DebitCard(Payment):
-
     def __init__(self):
         self.bank = Bank()
 
@@ -49,7 +50,6 @@ class DebitCard(Payment):
 
 
 class You(object):
-
     def __init__(self):
         print("You:: Lets buy the Denim shirt!")
 
@@ -65,6 +65,7 @@ class You(object):
             print("You:: Wow! Denim shirt is mine :-)")
         else:
             print("You:: I should earn more :(")
+
 
 if __name__ == "__main__":
     you = You()

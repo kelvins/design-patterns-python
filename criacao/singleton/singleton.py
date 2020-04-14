@@ -1,6 +1,6 @@
-# -*- encoding: UTF-8 -*-
-
-# Duas maneiras diferentes de criar um unico objeto utilizando o padrao Singleton
+"""
+Duas maneiras diferentes de criar um unico objeto utilizando o padrao Singleton
+"""
 
 
 class Singleton1(object):
@@ -20,9 +20,8 @@ class Singleton1(object):
 
 
 class Singleton2(object):
-
     def __new__(cls, nome):
-        if not hasattr(cls, 'instance'):
+        if not hasattr(cls, "instance"):
             cls.instance = super(Singleton2, cls).__new__(cls)
             cls.instance.__nome = nome
         return cls.instance
@@ -30,6 +29,7 @@ class Singleton2(object):
     @property
     def nome(self):
         return self.__nome
+
 
 if __name__ == "__main__":
 

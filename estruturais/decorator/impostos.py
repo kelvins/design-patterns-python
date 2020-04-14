@@ -1,14 +1,13 @@
-
 # -*- encoding: UTF-8 -*-
 
 # abc = abstract class
-# Ao utilizar o abstractmethod decorator obrigamos as classes filhas a implementarem os métodos
+# Ao utilizar o abstractmethod decorator obrigamos as
+# classes filhas a implementarem os métodos
 from abc import ABCMeta, abstractmethod
 
 
 class Imposto(object):
-
-    def __init__(self, outro_imposto = None):
+    def __init__(self, outro_imposto=None):
         self.__outro_imposto = outro_imposto
 
     def calculo_do_outro_imposto(self, orcamento):
@@ -29,9 +28,13 @@ class Template_de_impostos_condicional(Imposto, metaclass=ABCMeta):
 
     def calcula(self, orcamento):
         if self.deve_usar_maxima_taxacao(orcamento):
-            return self.maxima_taxacao(orcamento) + self.calculo_do_outro_imposto(orcamento)
+            return self.maxima_taxacao(
+                orcamento
+            ) + self.calculo_do_outro_imposto(orcamento)
         else:
-            return self.minima_taxacao(orcamento) + self.calculo_do_outro_imposto(orcamento)
+            return self.minima_taxacao(
+                orcamento
+            ) + self.calculo_do_outro_imposto(orcamento)
 
     @abstractmethod
     def deve_usar_maxima_taxacao(self, orcamento):
@@ -53,11 +56,11 @@ def IPVX(metodo_ou_funcao):
     # metodo_ou_funcao sera o metodo calcula
     def wrapper(self, orcamento):
         return metodo_ou_funcao(self, orcamento) + 50.0
+
     return wrapper
 
 
 class ISS(Imposto):
-
     @IPVX
     def calcula(self, orcamento):
 
@@ -65,14 +68,14 @@ class ISS(Imposto):
 
 
 class ICMS(Imposto):
-
     def calcula(self, orcamento):
 
-        return orcamento.valor * 0.06 + self.calculo_do_outro_imposto(orcamento)
+        return orcamento.valor * 0.06 + self.calculo_do_outro_imposto(
+            orcamento
+        )
 
 
 class ICPP(Template_de_impostos_condicional):
-
     def deve_usar_maxima_taxacao(self, orcamento):
 
         return orcamento.valor > 500
@@ -87,7 +90,6 @@ class ICPP(Template_de_impostos_condicional):
 
 
 class IKCV(Template_de_impostos_condicional):
-
     def __tem_item_maior_que_cem_reais(self, orcamento):
 
         for item in orcamento.obter_itens():
@@ -97,7 +99,9 @@ class IKCV(Template_de_impostos_condicional):
 
     def deve_usar_maxima_taxacao(self, orcamento):
 
-        return orcamento.valor > 500 and self.__tem_item_maior_que_cem_reais(orcamento)
+        return orcamento.valor > 500 and self.__tem_item_maior_que_cem_reais(
+            orcamento
+        )
 
     def maxima_taxacao(self, orcamento):
 
