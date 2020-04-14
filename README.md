@@ -1,6 +1,6 @@
 # Padrões de Projeto em Python
 
-Padrões de projeto em Python com código e descrição.
+Material de estudo sobre padrões de projeto em Python com código, descrição e em pt-br :brazil:
 
 - **Padrões de Criação**
   - [Abstract Factory](criacao/abstract_factory)
@@ -31,6 +31,10 @@ Padrões de projeto em Python com código e descrição.
   - [Strategy](comportamentais/strategy)
   - [Template Method](comportamentais/template_method)
   - [Visitor](comportamentais/visitor)
+
+## Contribuindo
+
+Se você tem interesse em contribuir com o projeto :heart_eyes: por favor leia o documento [CONTRIBUTING](https://github.com/kelvins/design-patterns-python/blob/master/CONTRIBUTING.md).
 
 ## Referências
 
