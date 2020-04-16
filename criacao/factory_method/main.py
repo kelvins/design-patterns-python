@@ -1,35 +1,41 @@
 from abc import ABCMeta, abstractmethod
 
 
-class Section(object, metaclass=ABCMeta):
+class Section(metaclass=ABCMeta):
+
     @abstractmethod
     def describe(self):
         pass
 
 
 class PersonalSection(Section):
+
     def describe(self):
-        print("Personal Section")
+        print('Personal Section')
 
 
 class AlbumSection(Section):
+
     def describe(self):
-        print("Album Section")
+        print('Album Section')
 
 
 class PatentSection(Section):
+
     def describe(self):
-        print("Patent Section")
+        print('Patent Section')
 
 
 class PublicationSection(Section):
+
     def describe(self):
-        print("Publication Section")
+        print('Publication Section')
 
 
-class Profile(object, metaclass=ABCMeta):
+class Profile(metaclass=ABCMeta):
+
     def __init__(self):
-        self.sections = []
+        self.sections = list()
         self.create_profile()
 
     @abstractmethod
@@ -44,6 +50,7 @@ class Profile(object, metaclass=ABCMeta):
 
 
 class Linkedin(Profile):
+
     def create_profile(self):
         self.add_section(PersonalSection())
         self.add_section(PatentSection())
@@ -51,18 +58,19 @@ class Linkedin(Profile):
 
 
 class Facebook(Profile):
+
     def create_profile(self):
         self.add_section(PersonalSection())
         self.add_section(AlbumSection())
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
 
     linkedin = Linkedin()
     facebook = Facebook()
 
-    print(("Creating Profile...", type(linkedin).__name__))
-    print(("Profile has sections --", linkedin.get_sections()))
+    print('Creating Profile...', type(linkedin).__name__)
+    print('Profile has sections --', linkedin.get_sections())
 
-    print(("Creating Profile...", type(facebook).__name__))
-    print(("Profile has sections --", facebook.get_sections()))
+    print('Creating Profile...', type(facebook).__name__)
+    print('Profile has sections --', facebook.get_sections())
