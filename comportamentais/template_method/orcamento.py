@@ -1,7 +1,7 @@
-class Orcamento(object):
-    def __init__(self):
+class Orcamento:
 
-        self.__itens = []
+    def __init__(self):
+        self.__itens = list()
 
     @property
     def valor(self):
@@ -21,7 +21,8 @@ class Orcamento(object):
         self.__itens.append(item)
 
 
-class Item(object):
+class Item:
+
     def __init__(self, nome, valor):
         self.__nome = nome
         self.__valor = valor

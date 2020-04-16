@@ -1,7 +1,8 @@
 from datetime import date
 
 
-class Contrato(object):
+class Contrato:
+
     def __init__(self, data, cliente, tipo):
         self.__data = data
         self.__cliente = cliente
@@ -32,15 +33,14 @@ class Contrato(object):
         self.__tipo = tipo
 
     def avanca(self):
-        if self.__tipo == "NOVO":
-            self.__tipo = "EM ANDAMENTO"
-        elif self.__tipo == "EM ANDAMENTO":
-            self.__tipo = "ACERTADO"
-        elif self.__tipo == "ACERTADO":
-            self.__tipo = "CONCLUIDO"
+        if self.__tipo == 'NOVO':
+            self.__tipo = 'EM ANDAMENTO'
+        elif self.__tipo == 'EM ANDAMENTO':
+            self.__tipo = 'ACERTADO'
+        elif self.__tipo == 'ACERTADO':
+            self.__tipo = 'CONCLUIDO'
 
     def salva_estado(self):
-
         # Não podemos passar o self para o Estado pois se o contrato fosse
         # alterado o estado anterior dele tambem seria alterado
         return Estado(
@@ -55,7 +55,8 @@ class Contrato(object):
         self.__tipo = estado.contrato.tipo
 
 
-class Estado(object):
+class Estado:
+
     def __init__(self, contrato):
         self.__contrato = contrato
 
@@ -64,9 +65,10 @@ class Estado(object):
         return self.__contrato
 
 
-class Historico(object):
+class Historico:
+
     def __init__(self):
-        self.__estados_salvos = []
+        self.__estados_salvos = list()
 
     def obtem_estado(self, indice):
         return self.__estados_salvos[indice]
@@ -75,13 +77,11 @@ class Historico(object):
         self.__estados_salvos.append(estado)
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
 
     historico = Historico()
 
-    contrato = Contrato(
-        data=date.today(), cliente="Kelvin Salton", tipo="NOVO"
-    )
+    contrato = Contrato(data=date.today(), cliente='Kelvin', tipo='NOVO')
 
     contrato.avanca()
 
@@ -89,7 +89,7 @@ if __name__ == "__main__":
 
     contrato.avanca()
 
-    contrato.cliente = "Joao da Silva"
+    contrato.cliente = 'Joao da Silva'
 
     historico.adiciona_estado(contrato.salva_estado())
 

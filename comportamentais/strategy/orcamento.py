@@ -1,6 +1,6 @@
-class Orcamento(object):
-    def __init__(self, valor):
+class Orcamento:
 
+    def __init__(self, valor):
         self.__valor = valor
 
     @property

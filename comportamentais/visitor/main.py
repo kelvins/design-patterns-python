@@ -1,4 +1,5 @@
-class Subtracao(object):
+class Subtracao:
+
     def __init__(self, expressao_esquerda, expressao_direita):
         self.__expressao_esquerda = expressao_esquerda
         self.__expressao_direita = expressao_direita
@@ -21,7 +22,8 @@ class Subtracao(object):
         return self.__expressao_direita
 
 
-class Soma(object):
+class Soma:
+
     def __init__(self, expressao_esquerda, expressao_direita):
         self.__expressao_esquerda = expressao_esquerda
         self.__expressao_direita = expressao_direita
@@ -44,7 +46,7 @@ class Soma(object):
         return self.__expressao_direita
 
 
-class Numero(object):
+class Numero:
     def __init__(self, numero):
         self.__numero = numero
 
@@ -55,7 +57,7 @@ class Numero(object):
         visitor.visita_numero(self)
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
 
     from impressao import Impressao
 
@@ -66,7 +68,7 @@ if __name__ == "__main__":
     impressao = Impressao()
     expressao_conta.aceita(impressao)
 
-    print("")
+    print('')
 
     expressao_esquerda = Subtracao(Numero(100), Numero(20))
     expressao_direita = Soma(Numero(5), Numero(5))

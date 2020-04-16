@@ -1,4 +1,6 @@
-class RadioStation(object):
+
+class RadioStation:
+
     def __init__(self, frequency):
         self.__frequency = frequency
 
@@ -7,9 +9,10 @@ class RadioStation(object):
         return self.__frequency
 
 
-class StationList(object):
+class StationList:
+
     def __init__(self):
-        self.__stations = []
+        self.__stations = list()
         self.__counter = 0
 
     def add_station(self, radio_station):
@@ -21,7 +24,7 @@ class StationList(object):
                 self.__stations.pop(index)
                 break
         else:
-            print("Radio station not found")
+            print('Radio station not found')
 
     def count(self):
         return len(self.__stations)
@@ -39,7 +42,7 @@ class StationList(object):
         self.__counter = 0
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     station_list = StationList()
 
     station_list.add_station(RadioStation(89))
@@ -47,10 +50,10 @@ if __name__ == "__main__":
     station_list.add_station(RadioStation(102))
     station_list.add_station(RadioStation(103.2))
 
-    print("Stations: {}".format(station_list.count()))
+    print(f'Stations: {station_list.count()}')
     station_list.remove_station(89)
-    print("Stations: {}".format(station_list.count()))
+    print(f'Stations: {station_list.count()}')
 
-    print("Current Station: {}".format(station_list.current()))
+    print(f'Current Station: {station_list.current()}')
     next(station_list)
-    print("Current Station: {}".format(station_list.current()))
+    print(f'Current Station: {station_list.current()}')
