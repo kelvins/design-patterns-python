@@ -1,13 +1,10 @@
-# -*- coding: UTF-8 -*-
-
 from datetime import date
 
-from nota_fiscal import Nota_fiscal
+from main import NotaFiscal
 
 
-class Criador_de_nota_fiscal(object):
+class CriadorNotaFiscal:
     def __init__(self):
-
         self.__razao_social = None
         self.__cnpj = None
         self.__data_de_emissao = None
@@ -35,7 +32,6 @@ class Criador_de_nota_fiscal(object):
         return self
 
     def constroi(self):
-
         if self.__razao_social is None:
             raise Exception("Razao social deve ser preenchida")
 
@@ -51,7 +47,7 @@ class Criador_de_nota_fiscal(object):
         if self.__detalhes is None:
             self.__detalhes = ""
 
-        return Nota_fiscal(
+        return NotaFiscal(
             razao_social=self.__razao_social,
             cnpj=self.__cnpj,
             itens=self.__itens,

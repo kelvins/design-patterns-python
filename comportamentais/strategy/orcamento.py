@@ -1,5 +1,4 @@
 class Orcamento:
-
     def __init__(self, valor):
         self.__valor = valor
 

@@ -1,6 +1,6 @@
 class Monostate:
 
-    __shared_state = {'1': '2'}
+    __shared_state = {"1": "2"}
 
     def __init__(self):
         self.x = 1
@@ -8,11 +8,11 @@ class Monostate:
         pass
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     m1 = Monostate()
     m2 = Monostate()
     m1.x = 4
     print(m1)
-    print(f'X value: {m1.x}')
+    print(f"X value: {m1.x}")
     print(m2)
-    print(f'X value: {m2.x}')
+    print(f"X value: {m2.x}")

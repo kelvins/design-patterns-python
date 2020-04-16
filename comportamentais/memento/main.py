@@ -2,7 +2,6 @@ from datetime import date
 
 
 class Contrato:
-
     def __init__(self, data, cliente, tipo):
         self.__data = data
         self.__cliente = cliente
@@ -33,12 +32,12 @@ class Contrato:
         self.__tipo = tipo
 
     def avanca(self):
-        if self.__tipo == 'NOVO':
-            self.__tipo = 'EM ANDAMENTO'
-        elif self.__tipo == 'EM ANDAMENTO':
-            self.__tipo = 'ACERTADO'
-        elif self.__tipo == 'ACERTADO':
-            self.__tipo = 'CONCLUIDO'
+        if self.__tipo == "NOVO":
+            self.__tipo = "EM ANDAMENTO"
+        elif self.__tipo == "EM ANDAMENTO":
+            self.__tipo = "ACERTADO"
+        elif self.__tipo == "ACERTADO":
+            self.__tipo = "CONCLUIDO"
 
     def salva_estado(self):
         # Não podemos passar o self para o Estado pois se o contrato fosse
@@ -56,7 +55,6 @@ class Contrato:
 
 
 class Estado:
-
     def __init__(self, contrato):
         self.__contrato = contrato
 
@@ -66,7 +64,6 @@ class Estado:
 
 
 class Historico:
-
     def __init__(self):
         self.__estados_salvos = list()
 
@@ -77,11 +74,11 @@ class Historico:
         self.__estados_salvos.append(estado)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
 
     historico = Historico()
 
-    contrato = Contrato(data=date.today(), cliente='Kelvin', tipo='NOVO')
+    contrato = Contrato(data=date.today(), cliente="Kelvin", tipo="NOVO")
 
     contrato.avanca()
 
@@ -89,7 +86,7 @@ if __name__ == '__main__':
 
     contrato.avanca()
 
-    contrato.cliente = 'Joao da Silva'
+    contrato.cliente = "Joao da Silva"
 
     historico.adiciona_estado(contrato.salva_estado())
 

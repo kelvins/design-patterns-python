@@ -1,5 +1,4 @@
 class Colaborador:
-
     def __init__(self, nome, salario):
         self.__nome = nome
         self.salario = salario
@@ -10,7 +9,6 @@ class Colaborador:
 
 
 class Desenvolvedor(Colaborador):
-
     def __init__(self, nome, salario, outro_parametro=None):
         super(Desenvolvedor, self).__init__(nome, salario)
         self.__outro_parametro = outro_parametro
@@ -21,7 +19,6 @@ class Desenvolvedor(Colaborador):
 
 
 class Designer(Colaborador):
-
     def __init__(self, nome, salario, mais_um_parametro=None):
         super(Designer, self).__init__(nome, salario)
         self.__mais_um_parametro = mais_um_parametro
@@ -32,7 +29,6 @@ class Designer(Colaborador):
 
 
 class Organizacao:
-
     def __init__(self):
         self.__colaboradores = list()
 
@@ -46,12 +42,12 @@ class Organizacao:
         return salarios
 
 
-if __name__ == '__main__':
-    joao = Desenvolvedor('Joao da Silva', 1800)
-    carla = Designer('Carla Camila', 1900)
+if __name__ == "__main__":
+    joao = Desenvolvedor("Joao da Silva", 1800)
+    carla = Designer("Carla Camila", 1900)
 
     organizacao = Organizacao()
     organizacao.add_colaborador(joao)
     organizacao.add_colaborador(carla)
 
-    print(f'Total salários: {organizacao.total_salarios()}')
+    print(f"Total salários: {organizacao.total_salarios()}")

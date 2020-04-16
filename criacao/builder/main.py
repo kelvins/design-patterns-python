@@ -1,9 +1,7 @@
-# -*- coding: UTF-8 -*-
-
 from datetime import date
 
 
-class Item(object):
+class Item:
     def __init__(self, descricao, valor):
         self.__descricao = descricao
         self.__valor = valor
@@ -17,7 +15,7 @@ class Item(object):
         return self.__valor
 
 
-class Nota_fiscal(object):
+class NotaFiscal:
     def __init__(
         self,
         razao_social,
@@ -59,11 +57,11 @@ class Nota_fiscal(object):
 
 if __name__ == "__main__":
 
-    from criador_de_nota_fiscal import Criador_de_nota_fiscal
+    from criador_de_nota_fiscal import CriadorNotaFiscal
 
     itens = [Item("ITEM A", 100), Item("ITEM B", 200)]
 
-    nota_fiscal = Nota_fiscal(
+    nota_fiscal = NotaFiscal(
         razao_social="FHSA Limitada",
         cnpj="01928391827321",
         itens=itens,
@@ -72,7 +70,7 @@ if __name__ == "__main__":
     )
 
     nota_fiscal_criada_com_builder = (
-        Criador_de_nota_fiscal()
+        CriadorNotaFiscal()
         .com_razao_social("FHSA Limitada")
         .com_cnpj("01928391827321")
         .com_itens(itens)

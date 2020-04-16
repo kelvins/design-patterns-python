@@ -1,5 +1,4 @@
 class DescontoCincoItens:
-
     def __init__(self, proximo_desconto):
         self.__proximo_desconto = proximo_desconto
 
@@ -10,7 +9,6 @@ class DescontoCincoItens:
 
 
 class DescontoMaisDeQuinhentosReais:
-
     def __init__(self, proximo_desconto):
         self.__proximo_desconto = proximo_desconto
 
@@ -21,6 +19,5 @@ class DescontoMaisDeQuinhentosReais:
 
 
 class SemDesconto:
-
     def calcula(self, orcamento):
         return 0

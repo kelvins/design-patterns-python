@@ -2,7 +2,6 @@ from impostos import ICMS, ISS
 
 
 class CalculadorImpostos:
-
     def realiza_calculo(self, orcamento, imposto):
         imposto_calculado = imposto.calcula(orcamento)
         print(imposto_calculado)

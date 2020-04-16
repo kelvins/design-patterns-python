@@ -2,7 +2,6 @@ from abc import ABCMeta, abstractmethod
 
 
 class Imposto:
-
     def __init__(self, outro_imposto=None):
         self.__outro_imposto = outro_imposto
 
@@ -17,7 +16,6 @@ class Imposto:
 
 
 class TemplateImpostosCondicional(Imposto, metaclass=ABCMeta):
-
     def calcula(self, orcamento):
         if self.deve_usar_maxima_taxacao(orcamento):
             return self.maxima_taxacao(
@@ -48,18 +46,17 @@ def IPVX(metodo_ou_funcao):
     # metodo_ou_funcao sera o metodo calcula
     def wrapper(self, orcamento):
         return metodo_ou_funcao(self, orcamento) + 50.0
+
     return wrapper
 
 
 class ISS(Imposto):
-
     @IPVX
     def calcula(self, orcamento):
         return orcamento.valor * 0.1 + self.calculo_do_outro_imposto(orcamento)
 
 
 class ICMS(Imposto):
-
     def calcula(self, orcamento):
         return orcamento.valor * 0.06 + self.calculo_do_outro_imposto(
             orcamento
@@ -67,7 +64,6 @@ class ICMS(Imposto):
 
 
 class ICPP(TemplateImpostosCondicional):
-
     def deve_usar_maxima_taxacao(self, orcamento):
         return orcamento.valor > 500
 
@@ -79,7 +75,6 @@ class ICPP(TemplateImpostosCondicional):
 
 
 class IKCV(TemplateImpostosCondicional):
-
     def __tem_item_maior_que_cem_reais(self, orcamento):
         for item in orcamento.obter_itens():
             if item.valor > 100:

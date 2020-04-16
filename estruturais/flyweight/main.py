@@ -1,5 +1,4 @@
 class KarakTea:
-
     def __init__(self, tea_type):
         self.__tea_type = tea_type
 
@@ -9,7 +8,6 @@ class KarakTea:
 
 
 class TeaMaker:
-
     def __init__(self):
         self.__available_tea = dict()
 
@@ -20,7 +18,6 @@ class TeaMaker:
 
 
 class TeaShop:
-
     def __init__(self, tea_maker):
         self.__orders = dict()
         self.__tea_maker = tea_maker
@@ -32,15 +29,15 @@ class TeaShop:
 
     def serve(self):
         for table, orders in self.__orders.items():
-            print('Serving tea to table {}'.format(table))
+            print("Serving tea to table {}".format(table))
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     tea_maker = TeaMaker()
     shop = TeaShop(tea_maker)
 
-    shop.take_order('red tea', 1)
-    shop.take_order('red tea more sugar', 2)
-    shop.take_order('red tea more milk', 3)
+    shop.take_order("red tea", 1)
+    shop.take_order("red tea more sugar", 2)
+    shop.take_order("red tea more milk", 3)
 
     shop.serve()

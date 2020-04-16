@@ -3,18 +3,17 @@ from datetime import date
 
 
 class Pedido:
-
     def __init__(self, cliente, valor):
         self.__cliente = cliente
         self.__valor = valor
-        self.__status = 'NOVO'
+        self.__status = "NOVO"
         self.__data_finalizacao = None
 
     def paga(self):
-        self.__status = 'PAGO'
+        self.__status = "PAGO"
 
     def finaliza(self):
-        self.__status = 'FINALIZADO'
+        self.__status = "FINALIZADO"
         self.__data_finalizacao = date.today()
 
     @property
@@ -35,14 +34,12 @@ class Pedido:
 
 
 class Comando(metaclass=ABCMeta):
-
     @abstractmethod
     def executa(self):
         pass
 
 
 class PagaPedido(Comando):
-
     def __init__(self, pedido):
         self.__pedido = pedido
 
@@ -51,7 +48,6 @@ class PagaPedido(Comando):
 
 
 class FinalizaPedido(Comando):
-
     def __init__(self, pedido):
         self.__pedido = pedido
 
@@ -60,7 +56,6 @@ class FinalizaPedido(Comando):
 
 
 class FilaTrabalho:
-
     def __init__(self):
         self.__comandos = list()
 
@@ -72,10 +67,10 @@ class FilaTrabalho:
             comando.executa()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
 
-    pedido1 = Pedido('Joao', 200.0)
-    pedido2 = Pedido('Ana', 400.0)
+    pedido1 = Pedido("Joao", 200.0)
+    pedido2 = Pedido("Ana", 400.0)
 
     fila = FilaTrabalho()
 

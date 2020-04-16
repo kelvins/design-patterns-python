@@ -1,5 +1,4 @@
 class Orcamento:
-
     def __init__(self):
         self.__itens = list()
 
@@ -19,7 +18,6 @@ class Orcamento:
 
 
 class Item:
-
     def __init__(self, nome, valor):
         self.__nome = nome
         self.__valor = valor
