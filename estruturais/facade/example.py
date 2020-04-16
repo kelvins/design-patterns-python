@@ -1,6 +1,3 @@
-# -*- encoding: UTF-8 -*-
-
-
 class Hotelier(object):
     def __init__(self):
         print("Arranging the Hotel for Marriage? --")

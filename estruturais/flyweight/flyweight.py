@@ -1,6 +1,3 @@
-# -*- encoding: UTF-8 -*-
-
-
 class KarakTea(object):
     def __init__(self, tea_type):
         self.__tea_type = tea_type

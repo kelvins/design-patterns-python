@@ -1,6 +1,3 @@
-# -*- encoding: UTF-8 -*-
-
-
 class Monostate(object):
 
     __shared_state = {"1": "2"}

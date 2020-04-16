@@ -1,5 +1,3 @@
-# -*- encoding: UTF-8 -*-
-
 # abc = abstract class
 # Ao utilizar o abstractmethod decorator obrigamos as
 # classes filhas a implementarem os métodos

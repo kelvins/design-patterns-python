@@ -1,6 +1,3 @@
-# -*- encoding: UTF-8 -*-
-
-
 class Colaborador(object):
     def __init__(self, nome, salario):
         self.__nome = nome

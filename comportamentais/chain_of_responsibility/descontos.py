@@ -1,6 +1,3 @@
-# -*- coding: UTF-8 -*-
-
-
 class Desconto_por_cinco_itens(object):
     def __init__(self, proximo_desconto):
 

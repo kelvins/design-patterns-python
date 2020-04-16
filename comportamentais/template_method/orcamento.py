@@ -1,6 +1,3 @@
-# -*- encoding: UTF-8 -*-
-
-
 class Orcamento(object):
     def __init__(self):
 

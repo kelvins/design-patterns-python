@@ -1,5 +1,3 @@
-# -*- encoding: UTF-8 -*-
-
 # Exemplo de aplicação do padrão Singleton utilizando metaclasses
 
 

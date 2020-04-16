@@ -1,5 +1,3 @@
-# -*- coding: UTF-8 -*-
-
 from descontos import (
     Desconto_por_cinco_itens,
     Desconto_por_mais_de_quinhentos_reais,

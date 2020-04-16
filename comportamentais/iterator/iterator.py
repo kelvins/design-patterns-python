@@ -1,7 +1,3 @@
-#!/usr/bin/env python
-# -*- encoding: utf-8 -*-
-
-
 class RadioStation(object):
     def __init__(self, frequency):
         self.__frequency = frequency

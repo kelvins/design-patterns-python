@@ -1,6 +1,3 @@
-# -*- encoding: UTF-8 -*-
-
-
 def imprime(nota_fiscal):
     print("Imprimindo nota fiscal %s" % (nota_fiscal.cnpj))
 

@@ -1,5 +1,3 @@
-# -*- encoding: UTF-8 -*-
-
 from impostos import ICMS, ICPP, IKCV, ISS
 
 
