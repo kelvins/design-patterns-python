@@ -1,9 +1,21 @@
-# -*- encoding: UTF-8 -*-
+class MetaSingleton(type):
 
-# Duas maneiras diferentes de criar um unico objeto utilizando o padrao Singleton
+    _instances = {}
+
+    def __call__(cls, *args, **kwargs):
+        if cls not in cls._instances:
+            cls._instances[cls] = super(MetaSingleton, cls).__call__(
+                *args, **kwargs
+            )
+        return cls._instances[cls]
 
 
-class Singleton1(object):
+class Logger(metaclass=MetaSingleton):
+    def __init__(self, x):
+        self.x = x
+
+
+class Singleton1:
 
     __instance = None
 
@@ -11,7 +23,6 @@ class Singleton1(object):
         if Singleton1.__instance is None:
             Singleton1.__instance = object.__new__(cls)
             Singleton1.__instance.__nome = nome
-
         return Singleton1.__instance
 
     @property
@@ -19,10 +30,9 @@ class Singleton1(object):
         return self.__nome
 
 
-class Singleton2(object):
-
+class Singleton2:
     def __new__(cls, nome):
-        if not hasattr(cls, 'instance'):
+        if not hasattr(cls, "instance"):
             cls.instance = super(Singleton2, cls).__new__(cls)
             cls.instance.__nome = nome
         return cls.instance
@@ -30,6 +40,7 @@ class Singleton2(object):
     @property
     def nome(self):
         return self.__nome
+
 
 if __name__ == "__main__":
 
@@ -52,3 +63,12 @@ if __name__ == "__main__":
     print(bar)
 
     print(foo is bar)
+
+    # Example using metaclass
+    logger1 = Logger(1)
+    logger2 = Logger(2)
+
+    print(logger1)
+    print(logger1.x)
+    print(logger2)
+    print(logger2.x)

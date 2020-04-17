@@ -1,13 +1,9 @@
-# -*- encoding: UTF-8 -*-
-
-from datetime import date
 from abc import ABCMeta, abstractmethod
+from datetime import date
 
 
-class Pedido(object):
-
+class Pedido:
     def __init__(self, cliente, valor):
-
         self.__cliente = cliente
         self.__valor = valor
         self.__status = "NOVO"
@@ -37,17 +33,13 @@ class Pedido(object):
         return self.__data_finalizacao
 
 
-class Comando(object):
-
-    __metaclass__ = ABCMeta
-
+class Comando(metaclass=ABCMeta):
     @abstractmethod
     def executa(self):
         pass
 
 
-class Paga_pedido(Comando):
-
+class PagaPedido(Comando):
     def __init__(self, pedido):
         self.__pedido = pedido
 
@@ -55,8 +47,7 @@ class Paga_pedido(Comando):
         self.__pedido.paga()
 
 
-class Finaliza_pedido(Comando):
-
+class FinalizaPedido(Comando):
     def __init__(self, pedido):
         self.__pedido = pedido
 
@@ -64,11 +55,9 @@ class Finaliza_pedido(Comando):
         self.__pedido.finaliza()
 
 
-class Fila_de_trabalho(object):
-
+class FilaTrabalho:
     def __init__(self):
-
-        self.__comandos = []
+        self.__comandos = list()
 
     def adiciona(self, comando):
         self.__comandos.append(comando)
@@ -77,16 +66,17 @@ class Fila_de_trabalho(object):
         for comando in self.__comandos:
             comando.executa()
 
+
 if __name__ == "__main__":
 
     pedido1 = Pedido("Joao", 200.0)
     pedido2 = Pedido("Ana", 400.0)
 
-    fila = Fila_de_trabalho()
+    fila = FilaTrabalho()
 
-    comando1 = Finaliza_pedido(pedido1)
-    comando2 = Paga_pedido(pedido1)
-    comando3 = Finaliza_pedido(pedido2)
+    comando1 = FinalizaPedido(pedido1)
+    comando2 = PagaPedido(pedido1)
+    comando3 = FinalizaPedido(pedido2)
 
     fila.adiciona(comando1)
     fila.adiciona(comando2)
@@ -94,6 +84,5 @@ if __name__ == "__main__":
 
     fila.processa()
 
-    print pedido1.status
-    print pedido2.status
-
+    print(pedido1.status)
+    print(pedido2.status)

@@ -1,19 +1,10 @@
-
-# -*- encoding: UTF-8 -*-
-
-
-class Orcamento(object):
-
+class Orcamento:
     def __init__(self):
-
-        self.__itens = []
+        self.__itens = list()
 
     @property
     def valor(self):
-        total = 0.0
-        for item in self.__itens:
-            total += item.valor
-        return total
+        return sum([item.valor for item in self.__itens])
 
     def obter_itens(self):
         return tuple(self.__itens)
@@ -26,8 +17,7 @@ class Orcamento(object):
         self.__itens.append(item)
 
 
-class Item(object):
-
+class Item:
     def __init__(self, nome, valor):
         self.__nome = nome
         self.__valor = valor
@@ -39,4 +29,3 @@ class Item(object):
     @property
     def nome(self):
         return self.__nome
-

@@ -1,13 +1,7 @@
-
-# -*- encoding: UTF-8 -*-
-
 from abc import ABCMeta, abstractmethod
 
 
-class Estado_de_um_orcamento(object):
-
-    __metaclass__ = ABCMeta
-
+class EstadoOrcamento(metaclass=ABCMeta):
     @abstractmethod
     def aplica_desconto_extra(self, orcamento):
         pass
@@ -25,8 +19,7 @@ class Estado_de_um_orcamento(object):
         pass
 
 
-class Em_aprovacao(Estado_de_um_orcamento):
-
+class EmAprovacao(EstadoOrcamento):
     def aplica_desconto_extra(self, orcamento):
         orcamento.adiciona_desconto_extra(orcamento.valor * 0.02)
 
@@ -40,8 +33,7 @@ class Em_aprovacao(Estado_de_um_orcamento):
         raise Exception("Orcamentos em aprovacao nao pode ser finalizado")
 
 
-class Aprovado(Estado_de_um_orcamento):
-
+class Aprovado(EstadoOrcamento):
     def aplica_desconto_extra(self, orcamento):
         orcamento.adiciona_desconto_extra(orcamento.valor * 0.05)
 
@@ -55,8 +47,7 @@ class Aprovado(Estado_de_um_orcamento):
         orcamento.estado_atual = Finalizado()
 
 
-class Reprovado(Estado_de_um_orcamento):
-
+class Reprovado(EstadoOrcamento):
     def aplica_desconto_extra(self, orcamento):
         raise Exception("Orcamentos reprovados nao recebem desconto extra")
 
@@ -70,8 +61,7 @@ class Reprovado(Estado_de_um_orcamento):
         orcamento.estado_atual = Finalizado()
 
 
-class Finalizado(Estado_de_um_orcamento):
-
+class Finalizado(EstadoOrcamento):
     def aplica_desconto_extra(self, orcamento):
         raise Exception("Orcamentos finalizados nao recebem desconto extra")
 
@@ -82,15 +72,15 @@ class Finalizado(Estado_de_um_orcamento):
         raise Exception("Orcamentos finalizado nao pode ser reprovado")
 
     def finaliza(self, orcamento):
-        raise Exception("Orcamentos finalizado nao pode ser finalizado novamente")
+        raise Exception(
+            "Orcamentos finalizado nao pode ser finalizado novamente"
+        )
 
 
-class Orcamento(object):
-
+class Orcamento:
     def __init__(self):
-
-        self.__itens = []
-        self.estado_atual = Em_aprovacao()
+        self.__itens = list()
+        self.estado_atual = EmAprovacao()
         self.__desconto_extra = 0
 
     def aprova(self):
@@ -126,8 +116,7 @@ class Orcamento(object):
         self.__itens.append(item)
 
 
-class Item(object):
-
+class Item:
     def __init__(self, nome, valor):
         self.__nome = nome
         self.__valor = valor
@@ -149,12 +138,12 @@ if __name__ == "__main__":
     orcamento.adiciona_item(Item("item 1", 50.0))
     orcamento.adiciona_item(Item("item 2", 400.0))
 
-    print orcamento.valor
+    print(orcamento.valor)
 
     orcamento.aprova()
 
     orcamento.aplica_desconto_extra()
 
-    print orcamento.valor
+    print(orcamento.valor)
 
     orcamento.finaliza()

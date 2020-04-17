@@ -1,23 +1,17 @@
-
-
-class Impressao(object):
-
+class Impressao:
     def visita_soma(self, soma):
-
-        print '(',
+        print("(", end=" ")
         soma.expressao_esquerda.aceita(self)
-        print '+',
+        print("+", end=" ")
         soma.expressao_direita.aceita(self)
-        print ')',
+        print(")", end=" ")
 
     def visita_subtracao(self, subtracao):
-
-        print '(',
+        print("(", end=" ")
         subtracao.expressao_esquerda.aceita(self)
-        print '-',
+        print("-", end=" ")
         subtracao.expressao_direita.aceita(self)
-        print ')',
+        print(")", end=" ")
 
     def visita_numero(self, numero):
-
-        print numero.avalia(),
+        print(numero.avalia(), end=" ")

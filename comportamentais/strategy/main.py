@@ -1,19 +1,17 @@
+from impostos import ICMS, ISS
 
-from impostos import ISS, ICMS
 
-class Calculador_de_impostos(object):
-
+class CalculadorImpostos:
     def realiza_calculo(self, orcamento, imposto):
-
         imposto_calculado = imposto.calcula(orcamento)
-
         print(imposto_calculado)
+
 
 if __name__ == "__main__":
 
     from orcamento import Orcamento
 
-    calculador = Calculador_de_impostos()
+    calculador = CalculadorImpostos()
 
     orcamento = Orcamento(500)
 

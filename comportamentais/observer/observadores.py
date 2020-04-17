@@ -1,10 +1,10 @@
-# -*- encoding: UTF-8 -*-
-
 def imprime(nota_fiscal):
-    print 'Imprimindo nota fiscal %s' % (nota_fiscal.cnpj)
+    print(f"Imprimindo nota fiscal {nota_fiscal.cnpj}")
+
 
 def envia_por_email(nota_fiscal):
-    print 'Enviando nota fiscal %s por email' % (nota_fiscal.cnpj)
+    print(f"Enviando nota fiscal {nota_fiscal.cnpj} por email")
+
 
 def salva_no_banco(nota_fiscal):
-    print 'Salvando nota fiscal %s no banco' % (nota_fiscal.cnpj)
+    print(f"Salvando nota fiscal {nota_fiscal.cnpj} no banco")
