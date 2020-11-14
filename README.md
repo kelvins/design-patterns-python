@@ -1,4 +1,4 @@
-# Padrões de Projeto em Python
+# :computer: Padrões de Projeto em Python
 
 Material de estudo sobre padrões de projeto em Python com código, descrição e em pt-br :brazil:
 
@@ -7,11 +7,11 @@ Material de estudo sobre padrões de projeto em Python com código, descrição 
 | [:link:][1]           | [Chain of Responsibility][25] | Nos permite aplicar uma lógica sequencial de forma dinâmica              |
 | [:cop:][2]            | [Command][26]                 | Executa uma sequência de comandos em cima de algum dado                  |
 | [:speech_balloon:][3] | [Interpreter][27]             | Quando precisamos interpretar diversas operações                         |
-| [:loop:][4]           | [Iterator][28]                | Uma maneira de acessar elementos de um objeto sem expor o conteúdo todo  |
+| [:loop:][4]           | [Iterator][28]                | Uma maneira de acessar elementos de um objeto sem expor o conteúdo       |
 | [:alien:][5]          | [Mediator][29]                | Encapsula a lógica de comunicação entre um conjunto de objetos           |
 | [:floppy_disk:][6]    | [Memento][30]                 | Guardar um estado que possa ser restaurado futuramente                   |
 | [:sunglasses:][7]     | [Observer][31]                | Criar uma lista de observadores interessados pela criação de um objeto   |
-| [:anger:][8]          | [State][32]                   | Define um conjunto de estados e os mesmos possuem uma ordem bem definida |
+| [:anger:][8]          | [State][32]                   | Define um conjunto de estados e os mesmos possuem uma ordem definida     |
 | [:bulb:][9]           | [Strategy][33]                | Passa como parâmetro uma função (estratégia) para outro método           |
 | [:ledger:][10]        | [Template Method][34]         | Classes abstratas para abstrair métodos em comum entre diversas classes  |
 | [:runner:][11]        | [Visitor][35]                 | Permite navegar pelos elementos de uma estrutura de dados                |
@@ -21,13 +21,13 @@ Material de estudo sobre padrões de projeto em Python com código, descrição 
 | [:hammer:][12]              | [Abstract Factory][36] | Cria um ou mais métodos de fábrica para criar uma família de objetos relacionados |
 | [:construction_worker:][13] | [Builder][37]          | Recebe parâmetros, verifica a validade e até definir parâmetros padrões           |
 | [:factory:][14]             | [Factory Method][38]   | Permite expor métodos ao cliente para criar novos objetos                         |
-| :one:                       | [Monostate (Borg)][39] | Cria mais de uma instância de uma classe mas todos os objetos tem o mesmo estado  |
+| :one:                       | [Monostate (Borg)][39] | Cria mais de uma instância da classe mas todos os objetos tem o mesmo estado      |
 | [:sheep:][16]               | [Prototype][40]        | O padrão prototype é um padrão utilizado basicamente para clonar objetos          |
 | [:gem:][17]                 | [Singleton][41]        | Garante que apenas um objeto de uma determinada classe seja criado                |
 
 |                        | Padrões Estruturais | Se preocupam com a forma como classes e objetos são compostos                  |
 |------------------------|---------------------|--------------------------------------------------------------------------------|
-| [:electric_plug:][18]  | [Adapter][42]       | Embrulha um objeto em um adaptador para torná-lo compatível com outras classes |
+| [:electric_plug:][18]  | [Adapter][42]       | Embrulha um objeto em um adapter para torná-lo compatível com outras classes   |
 | [:aerial_tramway:][19] | [Bridge][43]        | Dissocia uma abstração de sua implementação para que possam variar             |
 | [:herb:][20]           | [Composite][44]     | Permite tratar objetos individuais de forma uniforme                           |
 | [:art:][21]            | [Decorator][45]     | Permite compor/decorar os parâmetros de forma dinâmica                         |
@@ -35,11 +35,11 @@ Material de estudo sobre padrões de projeto em Python com código, descrição 
 | [:leaves:][23]         | [Flyweight][47]     | Minimiza o uso de custos computacionais compartilhando dados entre objetos     |
 | [:8ball:][24]          | [Proxy][48]         | Um objeto agente que encapsula o objeto que está realmente servindo            |
 
-## Contribuindo
+## :dancers: Contribuindo
 
 Se você tem interesse em contribuir com o projeto :heart_eyes: por favor leia o documento [CONTRIBUTING](https://github.com/kelvins/design-patterns-python/blob/master/CONTRIBUTING.md).
 
-## Referências
+## :book: Referências
 
 - [Curso Design Patterns Python I: Boas práticas de programação. Alura Online.](https://cursos.alura.com.br/course/design-patterns-python)
 - [Curso Design Patterns Python II: Boas práticas de programação. Alura Online.](https://cursos.alura.com.br/course/design-patterns-python-2)
