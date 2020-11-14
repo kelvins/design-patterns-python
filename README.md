@@ -11,14 +11,14 @@ Material de estudo sobre padrões de projeto em Python com código, descrição 
 | [:alien:][5]          | [Mediator][29]                | Encapsula a lógica de comunicação entre um conjunto de objetos           |
 | [:floppy_disk:][6]    | [Memento][30]                 | Guardar um estado que possa ser restaurado futuramente                   |
 | [:sunglasses:][7]     | [Observer][31]                | Criar uma lista de observadores interessados pela criação de um objeto   |
-| [:anger:][8]          | [State][32]                   | Define um conjunto de estados e os mesmos possuem uma ordem definida     |
+| [:anger:][8]          | [State][32]                   | Define um conjunto de estados que possui uma ordem definida              |
 | [:bulb:][9]           | [Strategy][33]                | Passa como parâmetro uma função (estratégia) para outro método           |
-| [:ledger:][10]        | [Template Method][34]         | Classes abstratas para abstrair métodos em comum entre diversas classes  |
+| [:ledger:][10]        | [Template Method][34]         | Classes ABC que abstraem métodos em comum entre diversas classes         |
 | [:runner:][11]        | [Visitor][35]                 | Permite navegar pelos elementos de uma estrutura de dados                |
 
 |                             | Padrões de Criação     | São aqueles que abstraem ou adiam o processo de criação dos objetos               |
 |-----------------------------|------------------------|-----------------------------------------------------------------------------------|
-| [:hammer:][12]              | [Abstract Factory][36] | Cria um ou mais métodos de fábrica para criar uma família de objetos relacionados |
+| [:hammer:][12]              | [Abstract Factory][36] | Cria um ou mais métodos de fábrica para criar uma família de objetos              |
 | [:construction_worker:][13] | [Builder][37]          | Recebe parâmetros, verifica a validade e até definir parâmetros padrões           |
 | [:factory:][14]             | [Factory Method][38]   | Permite expor métodos ao cliente para criar novos objetos                         |
 | :one:                       | [Monostate (Borg)][39] | Cria mais de uma instância da classe mas todos os objetos tem o mesmo estado      |
