@@ -27,7 +27,7 @@ Material de estudo sobre padrões de projeto em Python com código, descrição 
 
 |                        | Padrões Estruturais | Se preocupam com a forma como classes e objetos são compostos                  |
 |------------------------|---------------------|--------------------------------------------------------------------------------|
-| [:electric_plug:][18]  | [Adapter][42]       | Embrulha um objeto em um adapter para torná-lo compatível com outras classes   |
+| [:electric_plug:][18]  | [Adapter][42]       | Embrulha um objeto para torná-lo compatível com outras classes                 |
 | [:aerial_tramway:][19] | [Bridge][43]        | Dissocia uma abstração de sua implementação para que possam variar             |
 | [:herb:][20]           | [Composite][44]     | Permite tratar objetos individuais de forma uniforme                           |
 | [:art:][21]            | [Decorator][45]     | Permite compor/decorar os parâmetros de forma dinâmica                         |
