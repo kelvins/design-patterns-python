@@ -1,7 +1,7 @@
 
 # Decorator
 
-Ao utilizar o design pattern decorator, podemos compor/decorar os parâmetros de forma dinâmica. Neste exemplo, podemos compor multiplos impostos em um mesmo orcamento apenas passando um imposto para o construtor do anterior.
+Ao utilizar o design pattern decorator, podemos compor/decorar os parâmetros de forma dinâmica. Neste exemplo, podemos compor múltiplos impostos em um mesmo orçamento apenas passando um imposto para o construtor do anterior.
 
 ## Quando usar?
 

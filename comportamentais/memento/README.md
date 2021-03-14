@@ -7,4 +7,4 @@ Podemos aplicar o memento sempre que desejamos guardar um estado que possa ser r
 
 ## Quando usar?
 
-Devemos utilizar o memento sempre que precisamos armazenar um historico que possa ser restaurado.
+Devemos utilizar o memento sempre que precisamos armazenar um histórico que possa ser restaurado.
