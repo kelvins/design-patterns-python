@@ -3,55 +3,29 @@ from datetime import date
 
 class Contrato:
     def __init__(self, data, cliente, tipo):
-        self.__data = data
-        self.__cliente = cliente
-        self.__tipo = tipo
-
-    @property
-    def data(self):
-        return self.__data
-
-    @data.setter
-    def data(self, data):
-        self.__data = data
-
-    @property
-    def cliente(self):
-        return self.__cliente
-
-    @cliente.setter
-    def cliente(self, cliente):
-        self.__cliente = cliente
-
-    @property
-    def tipo(self):
-        return self.__tipo
-
-    @tipo.setter
-    def tipo(self, tipo):
-        self.__tipo = tipo
+        self.data = data
+        self.cliente = cliente
+        self.tipo = tipo
 
     def avanca(self):
-        if self.__tipo == "NOVO":
-            self.__tipo = "EM ANDAMENTO"
-        elif self.__tipo == "EM ANDAMENTO":
-            self.__tipo = "ACERTADO"
-        elif self.__tipo == "ACERTADO":
-            self.__tipo = "CONCLUIDO"
+        if self.tipo == "NOVO":
+            self.tipo = "EM ANDAMENTO"
+        elif self.tipo == "EM ANDAMENTO":
+            self.tipo = "ACERTADO"
+        elif self.tipo == "ACERTADO":
+            self.tipo = "CONCLUIDO"
 
     def salva_estado(self):
         # Não podemos passar o self para o Estado pois se o contrato fosse
-        # alterado o estado anterior dele tambem seria alterado
+        # alterado o estado anterior dele também seria alterado
         return Estado(
-            Contrato(
-                data=self.__data, cliente=self.__cliente, tipo=self.__tipo
-            )
+            Contrato(data=self.data, cliente=self.cliente, tipo=self.tipo)
         )
 
     def restaura_estado(self, estado):
-        self.__cliente = estado.contrato.cliente
-        self.__data = estado.contrato.data
-        self.__tipo = estado.contrato.tipo
+        self.cliente = estado.contrato.cliente
+        self.data = estado.contrato.data
+        self.tipo = estado.contrato.tipo
 
 
 class Estado:

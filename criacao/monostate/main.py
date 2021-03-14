@@ -5,7 +5,6 @@ class Monostate:
     def __init__(self):
         self.x = 1
         self.__dict__ = self.__shared_state
-        pass
 
 
 if __name__ == "__main__":
