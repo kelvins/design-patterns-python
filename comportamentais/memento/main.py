@@ -8,12 +8,12 @@ class Contrato:
         self.tipo = tipo
 
     def avanca(self):
-        if self.tipo == "NOVO":
-            self.tipo = "EM ANDAMENTO"
-        elif self.tipo == "EM ANDAMENTO":
-            self.tipo = "ACERTADO"
-        elif self.tipo == "ACERTADO":
-            self.tipo = "CONCLUIDO"
+        if self.tipo == 'NOVO':
+            self.tipo = 'EM ANDAMENTO'
+        elif self.tipo == 'EM ANDAMENTO':
+            self.tipo = 'ACERTADO'
+        elif self.tipo == 'ACERTADO':
+            self.tipo = 'CONCLUIDO'
 
     def salva_estado(self):
         # Não podemos passar o self para o Estado pois se o contrato fosse
@@ -48,11 +48,11 @@ class Historico:
         self.__estados_salvos.append(estado)
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
 
     historico = Historico()
 
-    contrato = Contrato(data=date.today(), cliente="Kelvin", tipo="NOVO")
+    contrato = Contrato(data=date.today(), cliente='Kelvin', tipo='NOVO')
 
     contrato.avanca()
 
@@ -60,7 +60,7 @@ if __name__ == "__main__":
 
     contrato.avanca()
 
-    contrato.cliente = "Joao da Silva"
+    contrato.cliente = 'Joao da Silva'
 
     historico.adiciona_estado(contrato.salva_estado())
 

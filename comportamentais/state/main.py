@@ -30,7 +30,7 @@ class EmAprovacao(EstadoOrcamento):
         orcamento.estado_atual = Reprovado()
 
     def finaliza(self, orcamento):
-        raise Exception("Orcamentos em aprovacao nao pode ser finalizado")
+        raise Exception('Orcamentos em aprovacao nao pode ser finalizado')
 
 
 class Aprovado(EstadoOrcamento):
@@ -38,10 +38,10 @@ class Aprovado(EstadoOrcamento):
         orcamento.adiciona_desconto_extra(orcamento.valor * 0.05)
 
     def aprova(self, orcamento):
-        raise Exception("Orcamentos aprovado nao pode ser aprovado novamente")
+        raise Exception('Orcamentos aprovado nao pode ser aprovado novamente')
 
     def reprova(self, orcamento):
-        raise Exception("Orcamentos aprovado nao pode ser reprovado")
+        raise Exception('Orcamentos aprovado nao pode ser reprovado')
 
     def finaliza(self, orcamento):
         orcamento.estado_atual = Finalizado()
@@ -49,13 +49,13 @@ class Aprovado(EstadoOrcamento):
 
 class Reprovado(EstadoOrcamento):
     def aplica_desconto_extra(self, orcamento):
-        raise Exception("Orcamentos reprovados nao recebem desconto extra")
+        raise Exception('Orcamentos reprovados nao recebem desconto extra')
 
     def aprova(self, orcamento):
-        raise Exception("Orcamentos aprovado nao pode ser aprovado")
+        raise Exception('Orcamentos aprovado nao pode ser aprovado')
 
     def reprova(self, orcamento):
-        raise Exception("Orcamentos aprovado nao pode ser reprovado novamente")
+        raise Exception('Orcamentos aprovado nao pode ser reprovado novamente')
 
     def finaliza(self, orcamento):
         orcamento.estado_atual = Finalizado()
@@ -63,17 +63,17 @@ class Reprovado(EstadoOrcamento):
 
 class Finalizado(EstadoOrcamento):
     def aplica_desconto_extra(self, orcamento):
-        raise Exception("Orcamentos finalizados nao recebem desconto extra")
+        raise Exception('Orcamentos finalizados nao recebem desconto extra')
 
     def aprova(self, orcamento):
-        raise Exception("Orcamentos finalizado nao pode ser aprovado")
+        raise Exception('Orcamentos finalizado nao pode ser aprovado')
 
     def reprova(self, orcamento):
-        raise Exception("Orcamentos finalizado nao pode ser reprovado")
+        raise Exception('Orcamentos finalizado nao pode ser reprovado')
 
     def finaliza(self, orcamento):
         raise Exception(
-            "Orcamentos finalizado nao pode ser finalizado novamente"
+            'Orcamentos finalizado nao pode ser finalizado novamente'
         )
 
 
@@ -130,13 +130,13 @@ class Item:
         return self.__nome
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
 
     orcamento = Orcamento()
 
-    orcamento.adiciona_item(Item("item 0", 100.0))
-    orcamento.adiciona_item(Item("item 1", 50.0))
-    orcamento.adiciona_item(Item("item 2", 400.0))
+    orcamento.adiciona_item(Item('item 0', 100.0))
+    orcamento.adiciona_item(Item('item 1', 50.0))
+    orcamento.adiciona_item(Item('item 2', 400.0))
 
     print(orcamento.valor)
 

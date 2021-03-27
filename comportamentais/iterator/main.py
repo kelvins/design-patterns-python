@@ -21,7 +21,7 @@ class StationList:
                 self.__stations.pop(index)
                 break
         else:
-            print("Radio station not found")
+            print('Radio station not found')
 
     def count(self):
         return len(self.__stations)
@@ -39,7 +39,7 @@ class StationList:
         self.__counter = 0
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     station_list = StationList()
 
     station_list.add_station(RadioStation(89))
@@ -47,10 +47,10 @@ if __name__ == "__main__":
     station_list.add_station(RadioStation(102))
     station_list.add_station(RadioStation(103.2))
 
-    print(f"Stations: {station_list.count()}")
+    print(f'Stations: {station_list.count()}')
     station_list.remove_station(89)
-    print(f"Stations: {station_list.count()}")
+    print(f'Stations: {station_list.count()}')
 
-    print(f"Current Station: {station_list.current()}")
+    print(f'Current Station: {station_list.current()}')
     next(station_list)
-    print(f"Current Station: {station_list.current()}")
+    print(f'Current Station: {station_list.current()}')

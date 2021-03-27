@@ -14,7 +14,7 @@ class ChatRoom(ChatRoomMediator):
     def show_message(self, user, message):
         time = datetime.now()
         sender = user.name
-        print(f"{time} [{sender}]: {message}")
+        print(f'{time} [{sender}]: {message}')
 
 
 class User:
@@ -26,16 +26,16 @@ class User:
         self.chat_mediator.show_message(self, message)
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
 
     mediator = ChatRoom()
 
-    john = User("John", mediator)
-    jane = User("Jane", mediator)
-    josh = User("Josh", mediator)
+    john = User('John', mediator)
+    jane = User('Jane', mediator)
+    josh = User('Josh', mediator)
 
-    john.send("Hi there!")
-    jane.send("Hi!")
-    john.send("How are you?")
+    john.send('Hi there!')
+    jane.send('Hi!')
+    john.send('How are you?')
     jane.send("I'm great, thanks!")
-    josh.send("Hi guys!")
+    josh.send('Hi guys!')

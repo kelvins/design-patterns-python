@@ -32,7 +32,7 @@ class Singleton1:
 
 class Singleton2:
     def __new__(cls, nome):
-        if not hasattr(cls, "instance"):
+        if not hasattr(cls, 'instance'):
             cls.instance = super(Singleton2, cls).__new__(cls)
             cls.instance.__nome = nome
         return cls.instance
@@ -42,23 +42,23 @@ class Singleton2:
         return self.__nome
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
 
-    foo = Singleton1("Maria")
+    foo = Singleton1('Maria')
     print(foo.nome)
     print(foo)
 
-    bar = Singleton1("Joao")
+    bar = Singleton1('Joao')
     print(bar.nome)
     print(bar)
 
     print(foo is bar)
 
-    foo = Singleton2("Maria")
+    foo = Singleton2('Maria')
     print(foo.nome)
     print(foo)
 
-    bar = Singleton2("Joao")
+    bar = Singleton2('Joao')
     print(bar.nome)
     print(bar)
 

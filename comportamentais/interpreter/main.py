@@ -30,7 +30,7 @@ class Numero:
         return self.__numero
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     expressao_esquerda = Soma(Numero(10), Numero(20))
     expressao_direita = Soma(Numero(5), Numero(2))
     expressao_conta = Soma(expressao_esquerda, expressao_direita)

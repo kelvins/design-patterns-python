@@ -42,12 +42,12 @@ class Organizacao:
         return salarios
 
 
-if __name__ == "__main__":
-    joao = Desenvolvedor("Joao da Silva", 1800)
-    carla = Designer("Carla Camila", 1900)
+if __name__ == '__main__':
+    joao = Desenvolvedor('Joao da Silva', 1800)
+    carla = Designer('Carla Camila', 1900)
 
     organizacao = Organizacao()
     organizacao.add_colaborador(joao)
     organizacao.add_colaborador(carla)
 
-    print(f"Total salários: {organizacao.total_salarios()}")
+    print(f'Total salários: {organizacao.total_salarios()}')

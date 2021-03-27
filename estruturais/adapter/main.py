@@ -9,12 +9,12 @@ class Lion(metaclass=ABCMeta):
 
 class AfricanLion(Lion):
     def roar(self):
-        print("African Lion")
+        print('African Lion')
 
 
 class AsianLion(Lion):
     def roar(self):
-        print("Asian Lion")
+        print('Asian Lion')
 
 
 class Hunter:
@@ -24,7 +24,7 @@ class Hunter:
 
 class WildDog:
     def bark(self):
-        print("Wild Dog")
+        print('Wild Dog')
 
 
 class WildDogAdapter(Lion):
@@ -35,7 +35,7 @@ class WildDogAdapter(Lion):
         self.__wild_dog.bark()
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
 
     african_lion = AfricanLion()
     asian_lion = AsianLion()

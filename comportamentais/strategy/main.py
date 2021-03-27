@@ -7,7 +7,7 @@ class CalculadorImpostos:
         print(imposto_calculado)
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
 
     from orcamento import Orcamento
 

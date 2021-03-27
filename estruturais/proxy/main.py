@@ -19,7 +19,7 @@ class Bank(Payment):
 
     def __has_founds(self):
         print(
-            f"Bank:: Check if Account {self.__get_account()} has enough funds"
+            f'Bank:: Check if Account {self.__get_account()} has enough funds'
         )
         return True
 
@@ -28,10 +28,10 @@ class Bank(Payment):
 
     def do_pay(self):
         if self.__has_founds():
-            print("Bank:: Paying the merchant")
+            print('Bank:: Paying the merchant')
             return True
         else:
-            print("Bank:: Sorry, not enough funds")
+            print('Bank:: Sorry, not enough funds')
             return False
 
 
@@ -40,14 +40,14 @@ class DebitCard(Payment):
         self.bank = Bank()
 
     def do_pay(self):
-        card = eval(input("Proxy:: Punch in Card Number: "))
+        card = eval(input('Proxy:: Punch in Card Number: '))
         self.bank.set_card(card)
         return self.bank.do_pay()
 
 
 class You:
     def __init__(self):
-        print("You:: Lets buy the Denim shirt!")
+        print('You:: Lets buy the Denim shirt!')
         self.debit_card = DebitCard()
         self.is_purchased = None
 
@@ -56,11 +56,11 @@ class You:
 
     def __del__(self):
         if self.is_purchased:
-            print("You:: Wow! Denim shirt is mine :-)")
+            print('You:: Wow! Denim shirt is mine :-)')
         else:
-            print("You:: I should earn more :(")
+            print('You:: I should earn more :(')
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     you = You()
     you.make_payment()

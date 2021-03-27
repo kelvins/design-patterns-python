@@ -33,19 +33,19 @@ class CriadorNotaFiscal:
 
     def constroi(self):
         if self.__razao_social is None:
-            raise Exception("Razao social deve ser preenchida")
+            raise Exception('Razao social deve ser preenchida')
 
         if self.__cnpj is None:
-            raise Exception("CNPJ deve ser preenchido")
+            raise Exception('CNPJ deve ser preenchido')
 
         if self.__itens is None:
-            raise Exception("Os itens devem ser preenchidos")
+            raise Exception('Os itens devem ser preenchidos')
 
         if self.__data_de_emissao is None:
             self.__data_de_emissao = date.today()
 
         if self.__detalhes is None:
-            self.__detalhes = ""
+            self.__detalhes = ''
 
         return NotaFiscal(
             razao_social=self.__razao_social,
