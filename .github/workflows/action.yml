@@ -1,12 +1,17 @@
-name: Check Markdown Links
+name: Validate
 
 on: push
 
 jobs:
-  check:
+  check-links:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@main
     - uses: gaurav-nelson/github-action-markdown-link-check@v1
       with:
         use-quiet-mode: 'yes'
+  check-code:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - run: make codecheck
