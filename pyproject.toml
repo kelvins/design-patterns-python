@@ -2,7 +2,7 @@
 name = "design-patterns-python"
 version = "0.1.0"
 description = "Material de estudo sobre padrões de projeto em Python"
-requires-python = ">=3.8"
+requires-python = ">=3.12"
 dependencies = []
 
 [dependency-groups]
