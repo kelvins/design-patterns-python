@@ -9,7 +9,7 @@ class CalculadorImpostos:
 
 if __name__ == '__main__':
 
-    from orcamento import Orcamento, Item
+    from orcamento import Item, Orcamento
 
     orcamento = Orcamento()
 

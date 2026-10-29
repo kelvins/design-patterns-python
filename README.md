@@ -37,7 +37,21 @@ Material de estudo sobre padrões de projeto em Python com código, descrição 
 
 ## :dancers: Contribuindo
 
-Se você tem interesse em contribuir com o projeto :heart_eyes: por favor leia o documento [CONTRIBUTING](https://github.com/kelvins/design-patterns-python/blob/master/CONTRIBUTING.md).
+Se você tem interesse em contribuir com o projeto :heart_eyes: por favor leia o documento [CONTRIBUTING](https://github.com/kelvins/design-patterns-python/blob/main/CONTRIBUTING.md).
+
+### Ambiente de desenvolvimento
+
+Instale o [UV](https://docs.astral.sh/uv/) e sincronize as dependências de desenvolvimento:
+
+```sh
+uv sync
+```
+
+Para executar as verificações de código:
+
+```sh
+make codecheck
+```
 
 ## :book: Referências
 
