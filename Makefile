@@ -1,6 +1,6 @@
 
 codecheck:  ## Run code check (flake8, black and isort)
-	@flake8 .
-	@black . -l 79 --check --skip-string-normalization
-	@isort . -rc -l 79 -m 3 -tc --check-only
-	@unify --check-only --recursive ./*
+	@uv run flake8 .
+	@uv run black . -l 79 --check --skip-string-normalization
+	@uv run isort . --line-length 79 --multi-line 3 --trailing-comma --check-only
+	@uv run ruff check . --select Q
