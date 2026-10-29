@@ -8,7 +8,6 @@ dependencies = []
 [dependency-groups]
 dev = [
     "black>=24.3.0",
-    "flake8>=3.7.9",
     "isort>=4.3.21",
     "ruff>=0.1.0",
 ]
@@ -16,5 +15,5 @@ dev = [
 [tool.uv]
 package = false
 
-[tool.ruff.lint.flake8-quotes]
-inline-quotes = "single"
+[tool.ruff.lint]
+select = ["E4", "E7", "E9", "F"]

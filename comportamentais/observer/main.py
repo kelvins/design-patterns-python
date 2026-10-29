@@ -61,7 +61,7 @@ class NotaFiscal:
 
 if __name__ == '__main__':
 
-    from observadores import imprime, envia_por_email, salva_no_banco
+    from observadores import envia_por_email, imprime, salva_no_banco
 
     itens = [Item('ITEM A', 100), Item('ITEM B', 200)]
 
